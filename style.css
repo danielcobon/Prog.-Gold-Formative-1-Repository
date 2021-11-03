@@ -1,7 +1,12 @@
 body {
     background-color: lightblue;
   }
-  
+
+    .jumbotron {
+    background-image: url("Climate Change Background.jpg");
+    background-size: cover;
+  }
+
   h1 {
     color: blue;
     text-align: center;

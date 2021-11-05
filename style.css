@@ -1,33 +1,53 @@
 body {
-    background-color: lightblue;
-  }
+    background-color: rgb(205, 231, 240);
+}
   
-  h1 {
-    color: blue;
-    text-align: center;
-    font-family: verdana;
-  }
-  
-  h2{}
-  p {
-    font-family: verdana;
-    font-size: 20px;
-  }
+  /* Properties for jumbotron */
+  .jumbotron {
+    background-image: url("Climate Change Background.jpg");
 
-  .bg-image {
-    /* The image used */
-    background-image: url("photographer.jpg");
-  
-    /* Add the blur effect */
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-  
-    /* Full height */
-    height: 100%;
-  
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /* Full height */
+    height: 100%;
   }
   
+  /* Styling for Title of webpage */
+  h1 {
+    color: blue;
+    text-align: center;
+    font-family: verdana;
+    font-size: 40px;
+  }
+  
+  /* Styling for header of jumbotron */
+  h2 {
+    color: darkblue;
+    font-family: verdana;
+    font-size: 30px;
+  }
+
+  /* Styling for header of grids */
+  h3 {
+    color: darkblue;
+    font-family: verdana;
+    font-size: 30px;
+  }
+
+  /* Styling for the description of jumbotron */
+  p1 {
+    font-family: verdana;
+    font-size: 20px;
+    }
+
+  /* Styling for the description in grids */
+  p2 {
+    font-family: verdana;
+    font-size: 20px;
+  } 

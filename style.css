@@ -28,19 +28,10 @@ body {
     word-wrap: break-word;
   }
 
+  /* Makes hyperlink not overlap with text */
   .no_overlap {
     display: inline-block;
   }
-
-  /* .embed-container {
-    position: sticky;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.27198%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 20%;
- } */
 
   /* Styling for Title of webpage */
   h1 {
@@ -76,6 +67,7 @@ body {
     font-size: 20px;
   } 
 
+  /* Makes divs with the specified class have a lightblue background */
   .container-fluid {background-color: lightblue;}
 
   #more-1 {display: none;}

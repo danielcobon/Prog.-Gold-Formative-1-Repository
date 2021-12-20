@@ -9,8 +9,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href= "style.css" rel = "stylesheet" type = "text/css">
+    <link href= "C:\Users\User\Desktop\Durham University\Programming (Gold)\Formative Assessment 1\CSS\style test.css" rel = "stylesheet" type = "text/css">
+    
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>
+
+    <!-- JS Script -->
+    <script src="C:\Users\User\Desktop\Durham University\Programming (Gold)\Formative Assessment 1\Formative 1 JS.js"></script>
+
   </head>
+
   <body>
       
     <!-- Optional JavaScript -->
@@ -19,15 +27,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  </body>
-</html>
-
-<!--Title of Webpage displayed-->
-<h1>Climate Change</h1>
+<!--Heading to offset Navbar as to not cover up too much of jumbotron-->
+<h1>off-set</h1>
 
 <!--Code from https://getbootstrap.com/docs/4.0/components/navbar/ -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="https://danielcobon.github.io/Prog.-Gold-Formative-1-Repository/">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,10 +41,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#facts">Facts</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Info</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#videos">Videos</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#stats">Statistics</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,9 +54,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="https://friendsoftheearth.uk/climate-change/what-can-I-do-to-stop-climate-change">How can I help?</a>
-          <a class="dropdown-item" href="#">Other News/Blogs</a>
+          <a class="dropdown-item" href="https://www.bbc.co.uk/news/science-environment-56837908">Other News/Blogs</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Related Associations</a>
+          <a class="dropdown-item" href="https://www.greenseas.org/projects/binforgreenseas/?gclid=EAIaIQobChMIj9mN1Ofv9AIVlGDmCh0cywYbEAAYASAAEgKr9vD_BwE">Associated Charity</a>
         </div>
       </li>
     </ul>
@@ -67,12 +74,133 @@
 <div class="jumbotron">
     <div class="container">
       <h2 class="display-3">About Climate Change</h2>
-      <p1>Learn about some facts and information on climate change from one of our associates to get you up to speed on the matter.</p1>
+      <p1>The purpose of this webpage is to spread awareness of climate change and its many effects and how to combat them.
+          Learn about some facts and information on climate change from one of our associates to get you up to speed on the matter.</p1>
+      <br>
+      <br>
       <p><a class="btn btn-primary btn-lg" href="https://www.un.org/en/climatechange/what-is-climate-change" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
 
-  <div class="container">
+  <!-- Starting of Videos Section-->
+  <div id="videos" class="container">
+
+    <h1>Videos on Climate Change</h1>
+    <br>
+
+  </div>
+
+  <!-- Contents of Video Section (Part 1) -->
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-8">
+
+        <h2>Causes and Effects of Climate Change</h2>
+
+        <p2>
+          The following video introduces the concept of how human activities such as overpopulation and pollution causes climate change and how humans could combat it.
+
+          <!-- Starting of span to enclose the buttom part of the paragraph for "Expand" -->
+          <span id="breaks-1"></span>
+
+          <span id="more-1">
+
+          Additionally, the video also explains on greenhouse gases and the main producer of said harmful gases, the burning of fossil fuels, and compares its production over the past years.
+          Lastly, the consequences of climate change such as its negative effects on the ocean causing floods in constal regions, food sources due to agricultural challenges, warmer temperature making weather more extreme and human health in certain areas due to the increase in smog are each stated in the video and elaborated upon.
+        
+          </span>
+        
+        </p2>
+
+        <br>
+
+        <!-- Button for "Expand" function in JS-->
+        <button type="button" class="btn btn-outline-info-1" style="background-color: lightgreen;" onclick="readmore_1()" id="myBtn-1">Expand</button>
+        
+        <br>
+        <br>
+
+        <p2>
+          Reference:
+
+          <br>
+
+          National Geographic (2017) <i>Causes and Effects of Climate Change | National Geographic.</i> 28 Augest. <a href="https://www.youtube.com/watch?v=G4H1N_yXBiA">https://www.youtube.com/watch?v=G4H1N_yXBiA</a> (Accessed: 18 November 2021).
+        </p2>
+
+      </div>
+
+      <div class="col-sm-4">
+        <iframe style="margin-top: 50px" width="470" height="315" src="https://www.youtube.com/embed/G4H1N_yXBiA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+
+  </div>
+
+  <!-- Contents of Video Section (Part 2) -->
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-sm-8">
+
+        <h2>Introduction to Renewable Energy</h2>
+
+        <p2>
+          The following video introduces the concept of how human activities such as overpopulation and pollution causes climate change and how humans could combat it.
+          
+          <!-- Starting of span to enclose the buttom part of the paragraph for "Expand" -->
+          <span id="breaks-2"></span>
+
+          <span id="more-2">
+                      
+          Additionally, the video also explains on greenhouse gases and the main producer of said harmful gases, the burning of fossil fuels, and compares its production over the past years.
+          Lastly, the consequences of climate change such as its negative effects on the ocean causing floods in constal regions, food sources due to agricultural challenges, warmer temperature making weather more extreme and human health in certain areas due to the increase in smog are each stated in the video and elaborated upon.
+          
+          </span>
+
+        </p2>
+
+        <br>
+
+        <!-- Button for "Expand" function in JS-->
+        <button type="button" class="btn btn-outline-info-2" style="background-color: lightgreen;" onclick="readmore_2()" id="myBtn-2">Expand</button>        
+
+        <br>
+        <br>
+
+        <p2>
+          Reference:
+          <br>
+
+          National Geographic (2017) <i>Renewable Energy 101 | National Geographic.</i> 22 September. <a href="https://www.youtube.com/watch?v=1kUE0BZtTRc">https://www.youtube.com/watch?v=1kUE0BZtTRc</a> (Accessed: 18 November 2021).
+          <br>
+        </p2>
+
+      </div>
+      <div class="col-sm-4">
+        <iframe style="margin-top: 50px" width="470" height="315" src="https://www.youtube.com/embed/1kUE0BZtTRc?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
+
+    </div>
+
+    <hr>
+
+  </div>
+
+  <!-- Starting of Facts Section-->
+  <div id="facts" class="container">
+
+    <h1>Facts on Climate Change</h1>
+    <br>
+
+  </div>
+  
+  <div class="container-fluid">
     <!-- Example row of columns -->
     <div class="row">
 
@@ -102,6 +230,8 @@
 
         <!--Button of first column-->
         <p2><a class="btn btn-secondary" href="https://climate.nasa.gov/effects/" role="button">View details &raquo;</a></p2>
+        <br>
+        <br>
       </div>
 
       <div class="col-md-4">
@@ -133,6 +263,8 @@
 
         <!--Button of second column-->
         <p2><a class="btn btn-secondary" href="https://ec.europa.eu/clima/climate-change/causes-climate-change_en" role="button">View details &raquo;</a></p2>
+        <br>
+        <br>
       </div>
 
       <div class="col-md-4">
@@ -142,7 +274,7 @@
 
         <!--Description of the third column-->
         <p2>A report from the World Health Organization (WHO) has stated that climate change could bring with it numerous health implications which could lead to illness or even death due the frequent extreme change in weather.
-           With relation to this, of the 930 million people who pay for health care, around 12% of them use at least 10% of their earnings to sustain it, while the poorest are uninsured.
+           With relation to this, of the 930 million people on this earth, around 12% of them use at least 10% of their earnings to sustain their health care, while the poorest are uninsured.
            Due to this, it leads to around 100 million people into poverty, with climate change worsening this trend.
            
         </p2>
@@ -163,6 +295,8 @@
 
         <!--Button of third column-->
         <p2><a class="btn btn-secondary" href="https://www.who.int/news-room/fact-sheets/detail/climate-change-and-health" role="button">View details &raquo;</a></p2>
+        <br>
+        <br>
       </div>
     </div>
 
@@ -170,8 +304,92 @@
 
   </div> <!-- /container -->
 
+  <!-- Starting of Stats Section-->
+  <div id="stats" class="container">
+
+    <h1>Statistics Affecting Climate Change</h1>
+    <br>
+
+  </div>
+
+  <!-- Add 2 buttons -->
+  <button onclick="update('var1')">Variable 1</button>
+  <button onclick="update('var2')">Variable 2</button>
+          
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz"></div>
+  <script>
+
+  // set the dimensions and margins of the graph
+  const margin = {top: 30, right: 30, bottom: 70, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+  // append the svg object to the body of the page
+  const svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  // Initialize the X axis
+  const x = d3.scaleBand()
+  .range([ 0, width ])
+  .padding(0.2);
+  const xAxis = svg.append("g")
+  .attr("transform", `translate(0,${height})`);
+
+  // Initialize the Y axis
+  const y = d3.scaleLinear()
+  .range([ height, 0]);
+  const yAxis = svg.append("g")
+  .attr("class", "myYaxis");
+
+
+  // A function that create / update the plot for a given variable:
+  function update(selectedVar) {
+
+    // Parse the Data
+    d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/barplot_change_data.csv").then( function(data) {
+
+      // X axis
+      x.domain(data.map(d => d.group));
+      xAxis.transition().duration(1000).call(d3.axisBottom(x));
+
+      // Add Y axis
+      y.domain([0, d3.max(data, d => +d[selectedVar]) ]);
+      yAxis.transition().duration(1000).call(d3.axisLeft(y));
+
+      // variable u: map data to existing bars
+      const u = svg.selectAll("rect")
+      .data(data)
+
+      // update bars
+      u.join("rect")
+        .transition()
+        .duration(1000)
+          .attr("x", d => x(d.group))
+          .attr("y", d => y(d[selectedVar]))
+          .attr("width", x.bandwidth())
+          .attr("height", d => height - y(d[selectedVar]))
+          .attr("fill", "#69b3a2")
+    })
+
+  }
+
+  // Initialize plot
+  update('var1')
+
+  </script>
+
 </main>
 
 <footer class="container">
+
+  <!-- Links to the github page for the webpage -->
   <p>&copy; Daniel Cyril Obon 2021. <a href="https://github.com/danielcobon/Prog.-Gold-Formative-1-Repository">https://github.com/danielcobon/Prog.-Gold-Formative-1-Repository</a></p>
 </footer>
+
+  </body>
+</html>

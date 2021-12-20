@@ -70,6 +70,16 @@ body {
   /* Makes divs with the specified class have a lightblue background */
   .container-fluid {background-color: lightblue;}
 
+  /* Class for center alignment */
+  .centered {
+    text-align: center;
+  }
+
+  /* Class for justify alignment */
+  .justify {
+    text-align: justify;
+  }
+
   #more-1 {display: none;}
 
   #more-2 {display: none;}

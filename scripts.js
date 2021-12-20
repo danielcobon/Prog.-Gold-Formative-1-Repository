@@ -68,7 +68,7 @@ var yAxis = svg.append("g")
 function update(selectedVar) {
 
   // Parse the Data
-  d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/barplot_change_data.csv", function(data) {
+  d3.csv("Carbon Dioxide Data.csv", function(data) {
 
     // X axis
     x.domain(data.map(function(d) { return d.Year; }))

@@ -313,8 +313,8 @@
   </div>
 
   <!-- Add 2 buttons -->
-  <button onclick="update('var1')">Variable 1</button>
-  <button onclick="update('var2')">Variable 2</button>
+  <button onclick="update('Mean')">Mean</button>
+  <button onclick="update('Annual Increase')">Annual Increase</button>
           
   <!-- Create a div where the graph will take place -->
   <div id="my_dataviz"></div>
@@ -351,10 +351,10 @@
   function update(selectedVar) {
 
     // Parse the Data
-    d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/barplot_change_data.csv").then( function(data) {
+    d3.csv("Carbon Dioxide Data 1.csv").then( function(data) {
 
       // X axis
-      x.domain(data.map(d => d.group));
+      x.domain(data.map(d => d.Year));
       xAxis.transition().duration(1000).call(d3.axisBottom(x));
 
       // Add Y axis
@@ -369,7 +369,7 @@
       u.join("rect")
         .transition()
         .duration(1000)
-          .attr("x", d => x(d.group))
+          .attr("x", d => x(d.Year))
           .attr("y", d => y(d[selectedVar]))
           .attr("width", x.bandwidth())
           .attr("height", d => height - y(d[selectedVar]))
@@ -379,7 +379,7 @@
   }
 
   // Initialize plot
-  update('var1')
+  update('Mean')
 
   </script>
 

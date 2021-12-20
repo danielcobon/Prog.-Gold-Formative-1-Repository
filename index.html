@@ -312,17 +312,51 @@
 
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid centered">
 
     <!-- Add 2 buttons -->
-    <button onclick="update('Mean')" style="margin-top: 50px ; margin-right:10px" class="btn btn-dark">Mean</button>
-    <button onclick="update('Annual Increase')"style="margin-top: 50px" class="btn btn-dark">Annual Increase</button>    
+    <button onclick="update('Mean')" style="margin-top: 30px ; margin-right:10px" class="btn btn-dark">Mean</button>
+    <button onclick="update('Annual Increase')"style="margin-top: 30px" class="btn btn-dark">Annual Increase</button>    
           
     <!-- Create a div where the graph will take place -->
-    <div id="my_dataviz" class="col-md-4">
+    <div id="my_dataviz" class="centered">
 
       <!-- Script to run graph visualisation (with interactive buttons to switch variables)-->
       <script src="scripts.js"></script>
+
+    </div>
+
+    <div class="centered">
+
+      <h2>
+        Statistics on the Increase in Carbon Dioxide (CO2) from 2000-2017
+      </h2>
+
+      <div class="justify">
+        <p2>
+          The above graph shows the the increase in carbon dioxide (CO2) in the earth's atmostsphere.  
+          The data shown is taken at every 1st of November from 2000 to 2017,
+          where 'Mean' is the average amount of CO2 (in mole fraction) in the earth's atmosphere 
+          while 'Annual Increase' is the amount of increase of CO2 compared to the previous year.
+          CO2 is one of the gases which makes up the greenhouse gases, 
+          which in turn is also responsible for the increase in the earth's temperature, 
+          leading to global warming.
+        </p2>
+
+        <br>
+        <br>
+        
+        <p2>Reference:
+
+          <br>
+
+          DataHub (2018) <i>CO2 PPM - Trends in Atmospheric Carbon Dioxide</i>. Available at: <a href="https://datahub.io/core/co2-ppm">https://datahub.io/core/co2-ppm</a> (Accessed: 27 November 2021).
+        </p2>
+
+      </div>
+
+      <br>
+      <br>
 
     </div>
 

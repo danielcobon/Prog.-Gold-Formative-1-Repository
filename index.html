@@ -9,13 +9,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href= "style.css" rel = "stylesheet" type = "text/css">
+    <link href= "C:\Users\User\Desktop\Durham University\Programming (Gold)\Formative Assessment 1\CSS\style test.css" rel = "stylesheet" type = "text/css">
     
     <!-- Load d3.js -->
-    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
 
     <!-- JS Script -->
-    <script src="Formative 1 JS.js"></script>
+    <script src="C:\Users\User\Desktop\Durham University\Programming (Gold)\Formative Assessment 1\scripts.js"></script>
 
   </head>
 
@@ -312,76 +312,22 @@
 
   </div>
 
-  <!-- Add 2 buttons -->
-  <button onclick="update('Mean')">Mean</button>
-  <button onclick="update('Annual Increase')">Annual Increase</button>
+  <div class="container-fluid">
+
+    <!-- Add 2 buttons -->
+    <button onclick="update('Mean')" style="margin-top: 50px ; margin-right:10px" class="btn btn-dark">Mean</button>
+    <button onclick="update('Annual Increase')"style="margin-top: 50px" class="btn btn-dark">Annual Increase</button>    
           
-  <!-- Create a div where the graph will take place -->
-  <div id="my_dataviz"></div>
-  <script>
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz" class="col-md-4">
 
-  // set the dimensions and margins of the graph
-  const margin = {top: 30, right: 30, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+      <!-- Script to run graph visualisation (with interactive buttons to switch variables)-->
+      <script src="scripts.js"></script>
 
-  // append the svg object to the body of the page
-  const svg = d3.select("#my_dataviz")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+    </div>
 
-  // Initialize the X axis
-  const x = d3.scaleBand()
-  .range([ 0, width ])
-  .padding(0.2);
-  const xAxis = svg.append("g")
-  .attr("transform", `translate(0,${height})`);
+  </div>
 
-  // Initialize the Y axis
-  const y = d3.scaleLinear()
-  .range([ height, 0]);
-  const yAxis = svg.append("g")
-  .attr("class", "myYaxis");
-
-
-  // A function that create / update the plot for a given variable:
-  function update(selectedVar) {
-
-    // Parse the Data
-    d3.csv("Carbon Dioxide Data 1.csv").then( function(data) {
-
-      // X axis
-      x.domain(data.map(d => d.Year));
-      xAxis.transition().duration(1000).call(d3.axisBottom(x));
-
-      // Add Y axis
-      y.domain([0, d3.max(data, d => +d[selectedVar]) ]);
-      yAxis.transition().duration(1000).call(d3.axisLeft(y));
-
-      // variable u: map data to existing bars
-      const u = svg.selectAll("rect")
-      .data(data)
-
-      // update bars
-      u.join("rect")
-        .transition()
-        .duration(1000)
-          .attr("x", d => x(d.Year))
-          .attr("y", d => y(d[selectedVar]))
-          .attr("width", x.bandwidth())
-          .attr("height", d => height - y(d[selectedVar]))
-          .attr("fill", "#69b3a2")
-    })
-
-  }
-
-  // Initialize plot
-  update('Mean')
-
-  </script>
 
 </main>
 
